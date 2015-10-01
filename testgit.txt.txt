@@ -1,7 +1,2 @@
-am adaugat ceva in dstfdfisier
-ceva a fost sters
+
 This is a github test.:) :)
-da, ceva a fost adaugat
-asdasd
-asdad
-ad
