@@ -1,0 +1,27 @@
+package ro.ubbcluj.cs.invoice.ui;
+
+import java.util.Scanner;
+
+import ro.ubbcluj.cs.invoice.service.InvoiceManager;
+
+public class InvoiceUI {
+
+	public void setInvoiceManager(InvoiceManager invoiceManager) {
+
+	}
+
+	public void startApp() throws IOException {
+		System.out.println("~~~Meniu~~~");
+		while (true) {
+			desplayMenu();
+			Scanner s = new Scanner(System.in);
+			String str = s.nextLine();
+		}
+	}
+
+	private void desplayMenu() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

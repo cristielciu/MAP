@@ -1,0 +1,7 @@
+package ro.ubbcluj.cs.invoice.model;
+
+import junit.framework.TestCase;
+
+public class FirmTest extends TestCase{
+
+}

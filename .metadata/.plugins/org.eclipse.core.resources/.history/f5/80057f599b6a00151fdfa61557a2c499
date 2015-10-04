@@ -1,0 +1,11 @@
+package ro.ubbcluj.cs.invoice.factory;
+
+public class Factory {
+	
+	public static final String FIRMSRL = "Firm-S.R.L" ;
+	
+	public static Firm createFirm(){
+		
+	}
+
+}

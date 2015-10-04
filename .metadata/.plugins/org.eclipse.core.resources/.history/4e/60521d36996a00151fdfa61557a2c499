@@ -1,0 +1,10 @@
+package ro.ubbcluj.cs.invoice.model;
+
+public class Firm {
+
+	public void setFirmName(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

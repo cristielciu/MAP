@@ -1,0 +1,6 @@
+1443961311856	Inline local variable 's'
+1443961319629	Extract local variable 'scanner'
+1443961326495	Convert local variable 'scanner' to field
+1443961490090	Extract method 'chooseComand'
+1443961890382	Convert local variable 'invoiceManagerUI' to field
+1443964585245	Convert local variable 'firmRepository' to field

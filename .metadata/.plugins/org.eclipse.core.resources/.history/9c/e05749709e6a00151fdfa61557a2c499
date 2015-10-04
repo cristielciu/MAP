@@ -1,0 +1,18 @@
+package ro.ubbcluj.cs.invoice.repository;
+
+import junit.framework.TestCase;
+
+public class FirmRepositoryTest extends TestCase{
+	
+	private FirmRepository repo = new FirmRepository();
+	
+	public void testCreate(){
+		FirmRepository repo = new FirmRepository();
+		assertEquals(repo.numberOfFirms(),0);
+	}
+	
+	public void testAdd(){
+		Fir
+	}
+
+}

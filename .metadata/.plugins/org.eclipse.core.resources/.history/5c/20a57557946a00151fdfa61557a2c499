@@ -1,0 +1,28 @@
+package ro.ubbcluj.cs.invoice.service;
+
+import ro.ubbcluj.cs.invoice.repository.ClientRepository;
+import ro.ubbcluj.cs.invoice.repository.FirmRepository;
+import ro.ubbcluj.cs.invoice.repository.InvoiceRepository;
+
+public class InvoiceManager {
+
+	public void setFirmRepository(FirmRepository firmRepository) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setClientRepository(ClientRepository clientRepository) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setInvoiceRepository(InvoiceRepository invoiceRepository) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addFirm() {
+		System.out.println("Firm added!");
+	}
+
+}

@@ -1,0 +1,15 @@
+package ro.ubbcluj.cs.invoice.repository;
+
+import java.util.ArrayList;
+
+import ro.ubbcluj.cs.invoice.model.Firm;
+
+public class FirmRepository {
+
+	public void add(Firm firm) {
+		// TODO Auto-generated method stub
+		ArrayList<Firm> firmRepository = new ArrayList<Firm>();
+		firmRepository.add(firm)
+	}
+
+}

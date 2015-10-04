@@ -1,0 +1,16 @@
+package ro.ubbcluj.cs.invoice.repository;
+
+import java.util.ArrayList;
+
+import ro.ubbcluj.cs.invoice.model.Firm;
+
+public class FirmRepository {
+
+	private ArrayList<Firm> firmRepository;
+
+	public void add(Firm firm) {
+		firmRepository = new ArrayList<Firm>();
+		firmRepository.add(firm);
+	}
+
+}
