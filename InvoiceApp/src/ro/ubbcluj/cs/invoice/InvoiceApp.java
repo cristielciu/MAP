@@ -14,7 +14,7 @@ public class InvoiceApp {
 			System.out.println("Parameter invalid!");
 			System.exit(1);
 		}
-		String name = args[0];
+//		String name = args[0];
 		try{
 			InvoiceUI invoiceUI = new InvoiceUI();
 			InvoiceManager invoiceManager = new InvoiceManager();

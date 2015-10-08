@@ -1,11 +1,13 @@
 package ro.ubbcluj.cs.invoice.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import ro.ubbcluj.cs.invoice.model.Firm;
 import ro.ubbcluj.cs.invoice.repository.ClientRepository;
 import ro.ubbcluj.cs.invoice.repository.FirmRepository;
 import ro.ubbcluj.cs.invoice.repository.InvoiceRepository;
+import ro.ubbcluj.cs.invoice.utils.InvalidFirmDelete;
 
 public class InvoiceManager {
 	private FirmRepository firmRepo;
@@ -28,8 +30,27 @@ public class InvoiceManager {
 	public void addFirm(HashMap<String, String> firmData) {
 		Firm firm = new Firm();
 		firm.setFirmName(firmData.get("FirmName"));
-		firm.setFirmAddress(firmData.get("FirmData"));
+		firm.setFirmAddress(firmData.get("FirmAddress"));
 		firmRepo.add(firm);
+	}
+
+	public String getFirms() {
+		ArrayList<Firm> firms = firmRepo.getAll();
+		String firmsStr = "";
+		if(firms.isEmpty()){
+			firmsStr = "There are no firms added!\n";
+		}
+		else{
+
+			for(Firm firm : firms){
+				firmsStr = firmsStr + "Firm name: " + firm.getName() +"\nFirm address: "+ firm.getAddress() + "\n\n";
+			}
+		}
+		return firmsStr;
+	}
+
+	public void deleteFirm(String firmName) throws InvalidFirmDelete {
+		firmRepo.delete(firmName);
 	}
 
 }

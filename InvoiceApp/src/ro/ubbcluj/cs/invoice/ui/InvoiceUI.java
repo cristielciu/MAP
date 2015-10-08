@@ -15,11 +15,9 @@ public class InvoiceUI {
 	}
 
 	public void startApp() {
-		System.out.println("~~~Meniu~~~");
 		while (true) {
 			desplayMenu();
-			scanner = new Scanner(System.in);
-			String str = scanner.nextLine();
+			String str = input();
 			int comand = 1;
 			try {
 				comand = Integer.parseInt(str);
@@ -36,25 +34,61 @@ public class InvoiceUI {
 
 	private void chooseComand(int comand) {
 		if (comand == 1){
-			invoiceManagerUI.addFirm(getFirmData());
+			try{
+				invoiceManagerUI.addFirm(getFirmData());
+				System.out.println("Firm added!");
+			}catch(Exception e){
+				System.out.println("Error");
+			}
 		}
+		else if(comand == 2){
+			desplayFirms();
+		}else if(comand == 3){
+			try{
+				invoiceManagerUI.deleteFirm(getFirmName());
+				System.out.println("Firm was removed!\n");
+			}catch (Exception e){
+				System.out.println("Error!");
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+
+	private String getFirmName() {
+		System.out.print("Firm name: ");
+		String s = input();
+		return s;
+	}
+
+	private String input() {
+		scanner = new Scanner(System.in);
+		return scanner.nextLine();
+	}
+
+	private void desplayFirms() {
+		String firms = invoiceManagerUI.getFirms();
+		System.out.println("Firms: \n");
+		System.out.println(firms);
 	}
 
 	private HashMap<String, String> getFirmData() {
 		HashMap<String, String> firmDataMap = new HashMap<String, String>();
 		System.out.print("Firm name: ");
-		scanner = new Scanner(System.in);
-		String str = scanner.nextLine();
+		String str = input();
 		firmDataMap.put("FirmName", str);
 		System.out.print("Firm address:");
-		scanner = new Scanner(System.in);
-		str = scanner.nextLine();
-		firmDataMap.put("Firm address", str);
+		str = input();
+		firmDataMap.put("FirmAddress", str);
 		return firmDataMap;
 	}
 
 	private void desplayMenu() {
+		System.out.println("~~~Meniu~~~\n");
 		System.out.println("1.Add new Firm.");
+		System.out.println("2.Print Firms.");
+		System.out.println("3.Remove Firm.");
+		System.out.println("0.Exit");
+		System.out.print("\nComand: ");
 	}
 
 }

@@ -7,3 +7,4 @@
 2015-10-04 15:17:18,574 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@e49e7f0{HTTP/1.1}{127.0.0.1:0}
 2015-10-04 15:17:18,667 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6c38c3c3{/help,null,UNAVAILABLE}
 2015-10-04 15:18:05,850 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2015-10-08 18:53:29,717 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.

@@ -1,0 +1,5 @@
+package ro.ubbcluj.cs.invoice.utils;
+
+public class InvalidFirmDelete extends Exception {
+
+}

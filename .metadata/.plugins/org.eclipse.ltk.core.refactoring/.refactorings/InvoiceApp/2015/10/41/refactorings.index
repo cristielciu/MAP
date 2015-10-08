@@ -4,3 +4,4 @@
 1443961490090	Extract method 'chooseComand'
 1443961890382	Convert local variable 'invoiceManagerUI' to field
 1443964585245	Convert local variable 'firmRepository' to field
+1444322793222	Extract method 'input'

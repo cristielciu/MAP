@@ -1,0 +1,13 @@
+package ro.ubbcluj.cs.invoice.utils;
+
+public class InvalidFirmDelete extends Exception {
+	private String message;
+
+	public InvalidFirmDelete(String msg) {
+		message = msg;
+	}
+	
+	public String getMessage() {
+		return message;
+	}
+}
