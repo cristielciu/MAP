@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import junit.framework.TestCase;
 import ro.ubbcluj.cs.invoice.factory.Factory;
 import ro.ubbcluj.cs.invoice.model.Firm;
+import ro.ubbcluj.cs.invoice.utils.DuplicateFirmError;
 import ro.ubbcluj.cs.invoice.utils.InvalidFirmDelete;
 
 public class FirmRepositoryTest extends TestCase{
@@ -17,7 +18,12 @@ public class FirmRepositoryTest extends TestCase{
 	public void testAdd(){
 		FirmRepository repo = new FirmRepository();
 		Firm firm = Factory.createFirm();
-		repo.add(firm);
+		try {
+			repo.add(firm);
+		} catch (DuplicateFirmError e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		assertEquals(repo.numberOfFirms(), 1);
 	}
 	
@@ -26,11 +32,16 @@ public class FirmRepositoryTest extends TestCase{
 		ArrayList<Firm> firms = new ArrayList<Firm>();
 		assertEquals(repo.getAll(), firms);
 		Firm firm = Factory.createFirm();
-		repo.add(firm);
+		try {
+			repo.add(firm);
+		} catch (DuplicateFirmError e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		assertEquals(repo.getAll().size(), 1);
 	}
 	
-	public void testRemove() {
+	public void testRemove() throws DuplicateFirmError {
 		FirmRepository repo = new FirmRepository();
 		try{
 			repo.delete("asd");

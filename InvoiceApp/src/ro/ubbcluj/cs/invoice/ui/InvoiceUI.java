@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import ro.ubbcluj.cs.invoice.service.InvoiceManager;
+import ro.ubbcluj.cs.invoice.utils.InvalidFirmDelete;
 
 public class InvoiceUI {
 
@@ -39,6 +40,7 @@ public class InvoiceUI {
 				System.out.println("Firm added!");
 			}catch(Exception e){
 				System.out.println("Error");
+				System.out.println(e.getMessage());
 			}
 		}
 		else if(comand == 2){
@@ -48,6 +50,14 @@ public class InvoiceUI {
 				invoiceManagerUI.deleteFirm(getFirmName());
 				System.out.println("Firm was removed!\n");
 			}catch (Exception e){
+				System.out.println("Error!");
+				System.out.println(e.getMessage());
+			}
+		}else if(comand == 4){
+			try {
+				invoiceManagerUI.updateFirm(getFirmData());
+				System.out.println("Firm has been updated!");
+			} catch (InvalidFirmDelete e) {
 				System.out.println("Error!");
 				System.out.println(e.getMessage());
 			}
@@ -87,6 +97,7 @@ public class InvoiceUI {
 		System.out.println("1.Add new Firm.");
 		System.out.println("2.Print Firms.");
 		System.out.println("3.Remove Firm.");
+		System.out.println("4.Update Firm.");
 		System.out.println("0.Exit");
 		System.out.print("\nComand: ");
 	}
